@@ -18,6 +18,17 @@ class HomeController extends Controller
     public function index()
     {
     	dd("heelo ujjwal");
-        return $this->respond('app');
+        return view('welcome');
+    }
+
+    /**
+     * Render view to upload pdf files
+     *
+     * @return void
+     */
+    public function uploadPDF()
+    {
+    	dd("upload pdf");
+        return view('welcome');
     }
 }

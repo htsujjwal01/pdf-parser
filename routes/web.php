@@ -32,5 +32,17 @@ Route::group([], function(){
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
-	Route::get('/', 'HomeController@index')->name('home');
+     /*
+    |--------------------------------------------------------------------------
+    | Authenticated Routes...
+    |--------------------------------------------------------------------------
+    */
+    Route::group(['middleware' => 'auth'], function () {
+
+		Route::get('/', 'HomeController@index')->name('root');
+
+		Route::get('/home', 'HomeController@uploadPDF')->name('root');
+
+	});
+
 });
