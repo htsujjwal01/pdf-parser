@@ -11,26 +11,19 @@
 |
 */
 
-Route::get('/hello', function () {
-    return view('welcome');
-});
-
-
 // Auth::routes();
 // Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::group([], function(){
 
-    // Login form for Admin Panel
+    // To show Login form for Dashboard
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
-    // Login for Admin Panel
+    // To post data for Login for Dashboard
     Route::post('login', 'Auth\LoginController@login');
 
-
-    // HACK: for easier logout control...
+    // For logout Control
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-
 
      /*
     |--------------------------------------------------------------------------
@@ -39,9 +32,8 @@ Route::group([], function(){
     */
     Route::group(['middleware' => 'auth'], function () {
 
-		Route::get('/', 'HomeController@index')->name('root');
-
-		Route::get('/home', 'HomeController@uploadPDF')->name('root');
+        Route::get('/', 'UploadController@index')->name('uploadPDF');
+		Route::post('/', 'UploadController@uploadPDF');
 
 	});
 

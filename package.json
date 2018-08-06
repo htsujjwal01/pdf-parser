@@ -12,23 +12,22 @@
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
-        "gulp": "^3.9.1",
-        "popper.js": "^1.12",
         "cross-env": "^5.1",
+        "gulp": "^3.9.1",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
+        "popper.js": "^1.12",
         "vue": "^2.5.7"
     },
-  "dependencies": {
-    "axios": "^0.15.2",
-    "bootstrap-sass": "^3.3.7",
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-install": "^0.6.0",
-    "jquery.resizeend": "^0.2.1",
-    "pace-progress": "^1.0.2",
-    "typeahead": "^0.2.2",
-    "whatwg-fetch": "^2.0.1"
-  }
+    "dependencies": {
+        "axios": "^0.15.2",
+        "bootstrap-sass": "^3.3.7",
+        "font-awesome": "^4.7.0",
+        "gulp-install": "^0.6.0",
+        "jquery.resizeend": "^0.2.1",
+        "pace-progress": "^1.0.2",
+        "typeahead": "^0.2.2",
+        "whatwg-fetch": "^2.0.1"
+    }
 }

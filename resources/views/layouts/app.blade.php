@@ -11,14 +11,33 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <style type="text/css">
+        .message{
+            text-align: center;
+            font-weight: bold;
+            color: blueviolet;
+            border: 5px solid darkgrey;
+            padding: 10px;
+            margin-bottom: 23px;
+        }
+
+    </style>
+    
     <!-- Scripts -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
 </head>
 <body>
     <div id="app">
@@ -65,7 +84,7 @@
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="GET" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
@@ -76,6 +95,12 @@
                 </div>
             </div>
         </nav>
+
+        @if(session()->has('message'))
+            <div class="message">
+                {!! session('message') !!}
+            </div>
+        @endif
 
         @yield('content')
     </div>

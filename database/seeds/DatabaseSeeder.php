@@ -11,14 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-
-        // First we need an admin account:
+        // First we need a testing account:
         \App\Models\User::create([
             'email'             => 'tests@pdfParser.com',
             'password'          => bcrypt('123456'),
             'remember_token'    => str_random(10),
-            'name'              => 'admin'
+            'name'              => 'Ujjwal Swaroop'
         ]);
 
         // Now, let's make some dummy accounts..

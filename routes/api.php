@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/pdf/{id}', 'Api\PDFController@getAllPDFPages');
+
+Route::get('/pdf/{id}/{page_no}', 'Api\PDFController@getSpecificPDFPages');
+
+Route::get('/pdf-text-search/{search}', 'Api\PDFController@getPDFByWord');
