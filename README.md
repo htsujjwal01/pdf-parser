@@ -2,7 +2,7 @@
 
 Hello Everyone,
 
-Below are the steps to run this module on your system:
+I have created this project using Laravel 5.6 and below are the steps to run this module on your system:
 
 1) First clone the project on your local machine and then create .env file from .env.example.
 
